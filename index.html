@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qtbLAB - App Development Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .project-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .project-status {
+            display: inline-block;
+            background: #4ade80;
+            color: #1a1a1a;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .about-content {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>qtbLAB</h1>
+            <p class="tagline">思いついたものを、カタチに。</p>
+        </header>
+
+        <section class="section">
+            <h2>🎮 Projects</h2>
+            <div class="project-card">
+                <div class="project-title">Froggo Jumpies</div>
+                <p>レトロな雰囲気の横スクロールアクションゲーム。カエルの冒険が今、始まる。</p>
+                <span class="project-status">2024年11月 Google Play リリース予定</span>
+            </div>
+            <div class="project-card">
+                <div class="project-title">More Coming Soon...</div>
+                <p>ゲームだけでなく、様々なアプリを開発中。次は何を作ろうか？</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>👤 About</h2>
+            <div class="about-content">
+                <h3 style="font-size: 1.5em; margin-bottom: 15px;">qtbLABについて</h3>
+                <p>個人開発チームとして、アイデアを形にしていくプロジェクトです。<br>
+                特定のジャンルにこだわらず、面白いと思ったものを自由に開発しています。</p>
+                
+                <h3 style="font-size: 1.5em; margin: 30px 0 15px;">中の人</h3>
+                <p>1人でコツコツと開発を進めています。<br>
+                ゲーム開発を中心に、様々なアプリケーション開発にチャレンジ中。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📧 Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> （準備中）
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong> （準備中）
+                </div>
+                <div class="contact-item">
+                    <strong>Twitter/X:</strong> （準備中）
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 qtbLAB. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
