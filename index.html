@@ -51,7 +51,6 @@
             padding: 20px;
         }
 
-        /* ホーム画面 */
         .home-screen {
             text-align: center;
             padding: 60px 20px 40px;
@@ -67,7 +66,7 @@
             font-size: 2.5em;
             color: #00ff88;
             text-shadow: 4px 4px 0px #004d29;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             animation: glow 2s ease-in-out infinite;
             font-family: 'Press Start 2P', cursive;
         }
@@ -75,85 +74,6 @@
         @keyframes glow {
             0%, 100% { text-shadow: 4px 4px 0px #004d29, 0 0 10px #00ff88; }
             50% { text-shadow: 4px 4px 0px #004d29, 0 0 20px #00ff88, 0 0 30px #00ff88; }
-        }
-
-        .subtitle {
-            font-size: 0.7em;
-            color: #ffd700;
-            margin-top: 15px;
-            letter-spacing: 2px;
-        }
-
-        .button-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        .nav-button {
-            background: linear-gradient(145deg, #2a2a4e, #1f1f3d);
-            border: 4px solid #00ff88;
-            border-radius: 10px;
-            padding: 50px 20px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            color: #00ff88;
-            font-size: 0.85em;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            font-weight: 700;
-        }
-
-        .nav-button:hover {
-            background: linear-gradient(145deg, #00ff88, #00cc6a);
-            color: #1a1a2e;
-            transform: scale(1.05);
-            box-shadow: 0 0 30px #00ff88;
-        }
-
-        .nav-button:active {
-            transform: scale(0.98);
-        }
-
-        .nav-button .icon {
-            font-size: 2.5em;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        /* 詳細ビュー */
-        .detail-screen {
-            display: none;
-            animation: fadeIn 0.3s ease;
-            min-height: 100vh;
-            padding: 60px 20px 40px;
-        }
-
-        .detail-screen.active {
-            display: block;
-        }
-
-        .back-button {
-            background: #00ff88;
-            border: 3px solid #00ff88;
-            color: #1a1a2e;
-            padding: 15px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.65em;
-            margin-bottom: 30px;
-            transition: all 0.2s ease;
-            font-weight: bold;
-            font-family: 'M PLUS 1', cursive;
-        }
-
-        .back-button:hover {
-            background: #ffd700;
-            border-color: #ffd700;
-            transform: translateX(-5px);
         }
 
         .window {
@@ -203,7 +123,6 @@
             margin: 20px 0;
             position: relative;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .project-box:hover {
@@ -227,7 +146,7 @@
 
         .badge {
             display: inline-block;
-            background: #00ff88;
+            background: #4ade80;
             color: #1a1a2e;
             padding: 8px 20px;
             border-radius: 20px;
@@ -236,116 +155,75 @@
             font-weight: bold;
         }
 
-        .badge.released {
-            background: #4ade80;
-        }
-
-        .badge.coming-soon {
-            background: #ff6b6b;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .goods-grid {
+        .button-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            margin: 20px 0;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
-        .goods-item {
-            background: #16213e;
-            border: 3px solid #00ff88;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        .nav-button {
+            background: linear-gradient(145deg, #2a2a4e, #1f1f3d);
+            border: 4px solid #00ff88;
+            border-radius: 10px;
+            padding: 50px 20px;
             cursor: pointer;
-        }
-
-        .goods-item:hover {
-            transform: translateY(-5px);
-            border-color: #ffd700;
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-        }
-
-        .goods-image {
-            background: linear-gradient(145deg, #0f3460, #1a2548);
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            border-bottom: 2px solid #00ff88;
-        }
-
-        .goods-info {
-            padding: 15px;
-        }
-
-        .goods-name {
-            font-size: 0.8em;
-            color: #ffd700;
-            margin-bottom: 10px;
-            font-weight: 700;
-            line-height: 1.4;
-        }
-
-        .goods-price {
-            font-size: 0.75em;
+            transition: all 0.2s ease;
             color: #00ff88;
-            font-weight: 700;
-        }
-
-        .goods-link {
-            font-size: 0.65em;
-            color: #00ffff;
-            margin-top: 8px;
-            display: block;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .goods-link:hover {
-            color: #ffd700;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .stat-box {
-            background: #0f3460;
-            border: 2px solid #00ff88;
-            border-radius: 8px;
-            padding: 20px;
+            font-size: 0.85em;
             text-align: center;
-            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-weight: 700;
         }
 
-        .stat-box:hover {
-            transform: translateY(-5px);
-            border-color: #ffd700;
+        .nav-button:hover {
+            background: linear-gradient(145deg, #00ff88, #00cc6a);
+            color: #1a1a2e;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #00ff88;
         }
 
-        .stat-number {
-            font-size: 1.8em;
-            color: #ffd700;
+        .nav-button:active {
+            transform: scale(0.98);
+        }
+
+        .nav-button .icon {
+            font-size: 2.5em;
             display: block;
-            margin-bottom: 10px;
-            font-weight: 700;
+            margin-bottom: 15px;
         }
 
-        .stat-label {
-            font-size: 0.7em;
-            color: #00ff88;
-            font-weight: 700;
+        .detail-screen {
+            display: none;
+            animation: fadeIn 0.3s ease;
+            min-height: 100vh;
+            padding: 60px 20px 40px;
+        }
+
+        .detail-screen.active {
+            display: block;
+        }
+
+        .back-button {
+            background: #00ff88;
+            border: 3px solid #00ff88;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.65em;
+            margin-bottom: 30px;
+            transition: all 0.2s ease;
+            font-weight: bold;
+            font-family: 'M PLUS 1', cursive;
+        }
+
+        .back-button:hover {
+            background: #ffd700;
+            border-color: #ffd700;
+            transform: translateX(-5px);
         }
 
         .contact-grid {
@@ -380,6 +258,27 @@
             font-size: 0.75em;
         }
 
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: #0f3460;
+            border: 2px solid #00ff88;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -400,12 +299,8 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @keyframes slideUp {
@@ -423,21 +318,15 @@
             .logo {
                 font-size: 1.8em;
             }
-            .subtitle {
-                font-size: 0.6em;
+            .window-content {
+                padding: 20px;
+                font-size: 0.75em;
             }
             .button-grid {
                 grid-template-columns: 1fr;
             }
             .nav-button {
                 padding: 40px 20px;
-            }
-            .window-content {
-                padding: 20px;
-                font-size: 0.65em;
-            }
-            .goods-grid {
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
         }
     </style>
@@ -448,12 +337,10 @@
     <div class="container">
         <!-- ホーム画面 -->
         <div class="home-screen" id="homeScreen">
-            <div>
-                <div class="logo">qtbLAB</div>
-            </div>
+            <div class="logo">qtbLAB</div>
 
             <!-- 最新情報セクション -->
-            <div class="window" style="margin: 40px 0;">
+            <div class="window">
                 <div class="window-header">LATEST NEWS</div>
                 <div class="window-content">
                     <div class="project-box">
@@ -462,11 +349,12 @@
                             レトロな雰囲気の横スクロールアクションゲーム<br>
                             2024年11月 Google Play Store リリース予定
                         </div>
-                        <span class="badge released">最新リリース</span>
+                        <span class="badge">最新リリース</span>
                     </div>
                 </div>
             </div>
 
+            <!-- ボタングリッド -->
             <div class="button-grid">
                 <button class="nav-button" onclick="showScreen('projects')">
                     <span class="icon">🎮</span>
@@ -507,7 +395,7 @@
                             レトロな雰囲気の横スクロールアクションゲーム<br>
                             カエルの大冒険が今、始まる
                         </div>
-                        <span class="badge released">リリース済み - 2024年11月</span>
+                        <span class="badge">リリース済み - 2024年11月</span>
                     </div>
 
                     <div class="project-box">
@@ -516,99 +404,7 @@
                             ゲームだけじゃない、アプリも、ツールも。<br>
                             次は何を作ろうか？
                         </div>
-                        <span class="badge coming-soon">開発中</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        </div>
-                                <div class="goods-price">¥3,000 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-
-                        <div class="goods-item">
-                            <div class="goods-image">🖱️</div>
-                            <div class="goods-info">
-                                <div class="goods-name">Froggo Mousepad</div>
-                                <div class="goods-price">¥2,000 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-
-                        <div class="goods-item">
-                            <div class="goods-image">🎒</div>
-                            <div class="goods-info">
-                                <div class="goods-name">qtbLAB Tote Bag</div>
-                                <div class="goods-price">¥3,500 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Business画面 -->
-        <div class="detail-screen" id="aboutScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
-                <div class="window-header">ABOUT qtbLAB</div>
-                <div class="window-content">
-                    <p style="margin-bottom: 30px; line-height: 1.8; font-size: 0.95em;">
-                        qtbLABは、アイデアを形にしていく個人開発チームです。<br>
-                        特定のジャンルにこだわらず、面白いと思ったものを自由に開発しています。
-                    </p>
-
-                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.1em;">開発方針</h3>
-                    <p style="line-height: 1.8; font-size: 0.95em;">
-                        「思いついたものを、カタチに」<br>
-                        制限や枠にとらわれず、自由な創作を大切にしています。
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- SNS画面 -->
-        <div class="detail-screen" id="snsScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
-                <div class="window-header">SNS</div>
-                <div class="window-content">
-                    <div class="contact-grid">
-                        <div class="contact-item">
-                            <span class="contact-icon">𝕏</span>
-                            <span class="contact-text">X (Twitter): （準備中）</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📷</span>
-                            <span class="contact-text">Instagram: （準備中）</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">▶️</span>
-                            <span class="contact-text">YouTube: （準備中）</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">🎵</span>
-                            <span class="contact-text">TikTok: （準備中）</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact画面 -->
-        <div class="detail-screen" id="contactScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
-                <div class="window-header">CONTACT</div>
-                <div class="window-content">
-                    <div class="contact-grid">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span class="contact-text">メール: （準備中）</span>
-                        </div>
+                        <span class="badge">開発中</span>
                     </div>
                 </div>
             </div>
@@ -733,6 +529,50 @@
             </div>
         </div>
 
+        <!-- SNS画面 -->
+        <div class="detail-screen" id="snsScreen">
+            <button class="back-button" onclick="showScreen('home')">← BACK</button>
+            <div class="window">
+                <div class="window-header">SNS</div>
+                <div class="window-content">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="contact-icon">𝕏</span>
+                            <span class="contact-text">X (Twitter): （準備中）</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📷</span>
+                            <span class="contact-text">Instagram: （準備中）</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">▶️</span>
+                            <span class="contact-text">YouTube: （準備中）</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🎵</span>
+                            <span class="contact-text">TikTok: （準備中）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact画面 -->
+        <div class="detail-screen" id="contactScreen">
+            <button class="back-button" onclick="showScreen('home')">← BACK</button>
+            <div class="window">
+                <div class="window-header">CONTACT</div>
+                <div class="window-content">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">メール: （準備中）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer>
             © 2024 qtbLAB. ALL RIGHTS RESERVED.
         </footer>
@@ -754,22 +594,18 @@
 
         // 画面切り替え
         function showScreen(screenName) {
-            // すべての詳細画面を非表示
             document.getElementById('homeScreen').classList.remove('hidden');
             document.getElementById('projectsScreen').classList.remove('active');
-            document.getElementById('contactScreen').classList.remove('active');
             document.getElementById('businessScreen').classList.remove('active');
             document.getElementById('profileScreen').classList.remove('active');
             document.getElementById('snsScreen').classList.remove('active');
+            document.getElementById('contactScreen').classList.remove('active');
 
             if (screenName === 'home') {
                 document.getElementById('homeScreen').classList.remove('hidden');
             } else if (screenName === 'projects') {
                 document.getElementById('homeScreen').classList.add('hidden');
                 document.getElementById('projectsScreen').classList.add('active');
-            } else if (screenName === 'contact') {
-                document.getElementById('homeScreen').classList.add('hidden');
-                document.getElementById('contactScreen').classList.add('active');
             } else if (screenName === 'business') {
                 document.getElementById('homeScreen').classList.add('hidden');
                 document.getElementById('businessScreen').classList.add('active');
@@ -779,6 +615,9 @@
             } else if (screenName === 'sns') {
                 document.getElementById('homeScreen').classList.add('hidden');
                 document.getElementById('snsScreen').classList.add('active');
+            } else if (screenName === 'contact') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('contactScreen').classList.add('active');
             }
         }
     </script>
