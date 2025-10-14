@@ -191,7 +191,7 @@
 
         .window-content {
             padding: 30px;
-            font-size: 0.7em;
+            font-size: 0.85em;
             line-height: 2;
         }
 
@@ -459,59 +459,10 @@
                     <div class="project-box">
                         <div class="project-title">🐸 Froggo Jumpies</div>
                         <div class="project-desc">
-                            A retro-style horizontal scroll action game.<br>
-                            Google Play Store - November 2024
+                            レトロな雰囲気の横スクロールアクションゲーム<br>
+                            2024年11月 Google Play Store リリース予定
                         </div>
-                        <span class="badge released">Latest Release</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Suzuriグッズセクション -->
-            <div class="window" style="margin: 40px 0;">
-                <div class="window-header">FEATURED ITEMS ON SUZURI</div>
-                <div class="window-content">
-                    <div class="goods-grid">
-                        <div class="goods-item">
-                            <div class="goods-image">👕</div>
-                            <div class="goods-info">
-                                <div class="goods-name">Froggo Jumpies T-Shirt</div>
-                                <div class="goods-price">¥2,500 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-
-                        <div class="goods-item">
-                            <div class="goods-image">🧢</div>
-                            <div class="goods-info">
-                                <div class="goods-name">qtbLAB Cap</div>
-                                <div class="goods-price">¥3,000 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-
-                        <div class="goods-item">
-                            <div class="goods-image">🖱️</div>
-                            <div class="goods-info">
-                                <div class="goods-name">Froggo Mousepad</div>
-                                <div class="goods-price">¥2,000 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-
-                        <div class="goods-item">
-                            <div class="goods-image">🎒</div>
-                            <div class="goods-info">
-                                <div class="goods-name">qtbLAB Tote Bag</div>
-                                <div class="goods-price">¥3,500 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="text-align: center; margin-top: 30px;">
-                        <a href="https://suzuri.jp/qtbLAB" style="color: #00ff88; font-size: 0.8em; text-decoration: none; border: 2px solid #00ff88; padding: 10px 30px; display: inline-block; border-radius: 5px; transition: all 0.2s ease;" onmouseover="this.style.background='#00ff88'; this.style.color='#1a1a2e';" onmouseout="this.style.background='transparent'; this.style.color='#00ff88';">
-                            View All Items on SUZURI
-                        </a>
+                        <span class="badge released">最新リリース</span>
                     </div>
                 </div>
             </div>
@@ -521,13 +472,21 @@
                     <span class="icon">🎮</span>
                     <span>PROJECTS</span>
                 </button>
-                <button class="nav-button" onclick="showScreen('merchandise')">
+                <button class="nav-button" onclick="window.open('https://suzuri.jp/qtbLAB', '_blank')">
                     <span class="icon">🛍️</span>
                     <span>MERCHANDISE</span>
                 </button>
-                <button class="nav-button" onclick="showScreen('about')">
+                <button class="nav-button" onclick="showScreen('business')">
+                    <span class="icon">💼</span>
+                    <span>BUSINESS</span>
+                </button>
+                <button class="nav-button" onclick="showScreen('profile')">
                     <span class="icon">👤</span>
-                    <span>ABOUT</span>
+                    <span>PROFILE</span>
+                </button>
+                <button class="nav-button" onclick="showScreen('sns')">
+                    <span class="icon">🌐</span>
+                    <span>SNS</span>
                 </button>
                 <button class="nav-button" onclick="showScreen('contact')">
                     <span class="icon">📧</span>
@@ -545,48 +504,25 @@
                     <div class="project-box">
                         <div class="project-title">🐸 Froggo Jumpies</div>
                         <div class="project-desc">
-                            A retro-style horizontal scroll action game.<br>
-                            Embark on a frog adventure like never before.
+                            レトロな雰囲気の横スクロールアクションゲーム<br>
+                            カエルの大冒険が今、始まる
                         </div>
-                        <span class="badge released">Released - November 2024</span>
+                        <span class="badge released">リリース済み - 2024年11月</span>
                     </div>
 
                     <div class="project-box">
-                        <div class="project-title">🎮 Coming Soon...</div>
+                        <div class="project-title">🎮 次のプロジェクト</div>
                         <div class="project-desc">
-                            We're working on various apps and tools beyond just games.<br>
-                            What will we create next?
+                            ゲームだけじゃない、アプリも、ツールも。<br>
+                            次は何を作ろうか？
                         </div>
-                        <span class="badge coming-soon">In Development</span>
+                        <span class="badge coming-soon">開発中</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Merchandise画面 -->
-        <div class="detail-screen" id="merchandiseScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
-                <div class="window-header">MERCHANDISE - ON SUZURI</div>
-                <div class="window-content">
-                    <p style="margin-bottom: 30px; font-size: 0.85em;">
-                        Our original merchandise is available on <strong>SUZURI</strong>!<br>
-                        <a href="https://suzuri.jp/qtbLAB" style="color: #00ff88; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#ffd700';" onmouseout="this.style.color='#00ff88';">Visit our SUZURI store →</a>
-                    </p>
-                    <div class="goods-grid">
-                        <div class="goods-item">
-                            <div class="goods-image">👕</div>
-                            <div class="goods-info">
-                                <div class="goods-name">Froggo Jumpies T-Shirt</div>
-                                <div class="goods-price">¥2,500 -</div>
-                                <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
-                            </div>
-                        </div>
-
-                        <div class="goods-item">
-                            <div class="goods-image">🧢</div>
-                            <div class="goods-info">
-                                <div class="goods-name">qtbLAB Cap</div>
+        </div>
                                 <div class="goods-price">¥3,000 -</div>
                                 <a href="https://suzuri.jp/qtbLAB" class="goods-link">SUZURI →</a>
                             </div>
@@ -614,28 +550,50 @@
             </div>
         </div>
 
-        <!-- About画面 -->
+        <!-- Business画面 -->
         <div class="detail-screen" id="aboutScreen">
             <button class="back-button" onclick="showScreen('home')">← BACK</button>
             <div class="window">
                 <div class="window-header">ABOUT qtbLAB</div>
                 <div class="window-content">
-                    <p style="margin-bottom: 30px; line-height: 1.8;">
+                    <p style="margin-bottom: 30px; line-height: 1.8; font-size: 0.95em;">
                         qtbLABは、アイデアを形にしていく個人開発チームです。<br>
                         特定のジャンルにこだわらず、面白いと思ったものを自由に開発しています。
                     </p>
 
-                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1em;">中の人について</h3>
-                    <p style="margin-bottom: 20px; line-height: 1.8;">
-                        1人でコツコツと開発を進めています。<br>
-                        ゲーム開発を中心に、様々なアプリケーション開発にチャレンジ中。
-                    </p>
-
-                    <h3 style="color: #ffd700; margin: 30px 0 20px; font-size: 1em;">開発方針</h3>
-                    <p style="line-height: 1.8;">
+                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.1em;">開発方針</h3>
+                    <p style="line-height: 1.8; font-size: 0.95em;">
                         「思いついたものを、カタチに」<br>
                         制限や枠にとらわれず、自由な創作を大切にしています。
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SNS画面 -->
+        <div class="detail-screen" id="snsScreen">
+            <button class="back-button" onclick="showScreen('home')">← BACK</button>
+            <div class="window">
+                <div class="window-header">SNS</div>
+                <div class="window-content">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="contact-icon">𝕏</span>
+                            <span class="contact-text">X (Twitter): （準備中）</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📷</span>
+                            <span class="contact-text">Instagram: （準備中）</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">▶️</span>
+                            <span class="contact-text">YouTube: （準備中）</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🎵</span>
+                            <span class="contact-text">TikTok: （準備中）</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -649,16 +607,127 @@
                     <div class="contact-grid">
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span class="contact-text">Email: （準備中）</span>
+                            <span class="contact-text">メール: （準備中）</span>
                         </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">💻</span>
-                            <span class="contact-text">GitHub: （準備中）</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business画面 -->
+        <div class="detail-screen" id="businessScreen">
+            <button class="back-button" onclick="showScreen('home')">← BACK</button>
+            <div class="window">
+                <div class="window-header">BUSINESS</div>
+                <div class="window-content">
+                    <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.1em;">事業内容</h3>
+                    <p style="margin-bottom: 30px; line-height: 1.8; font-size: 0.95em;">
+                        qtbLABでは、以下の事業を展開しています：
+                    </p>
+                    
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px; font-size: 0.95em;">📱 アプリ開発</h4>
+                        <p style="font-size: 0.9em; line-height: 1.6;">
+                            iOSやAndroidなど、様々なプラットフォーム向けのアプリケーション開発を行っています。
+                        </p>
+                    </div>
+
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px; font-size: 0.95em;">🎮 ゲーム開発</h4>
+                        <p style="font-size: 0.9em; line-height: 1.6;">
+                            レトロゲームから最新のゲーム技術まで、幅広いゲーム開発に取り組んでいます。
+                        </p>
+                    </div>
+
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                        <h4 style="color: #ffd700; margin-bottom: 10px; font-size: 0.95em;">🛍️ グッズ販売</h4>
+                        <p style="font-size: 0.9em; line-height: 1.6;">
+                            Suzuriを通じて、オリジナルグッズを販売しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile画面 -->
+        <div class="detail-screen" id="profileScreen">
+            <button class="back-button" onclick="showScreen('home')">← BACK</button>
+            <div class="window">
+                <div class="window-header">PROFILE</div>
+                <div class="window-content">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <div style="font-size: 4em; margin-bottom: 15px;">👨‍💻</div>
+                        <h2 style="color: #ffd700; font-size: 1.2em; margin-bottom: 10px;">タコカン</h2>
+                    </div>
+
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em;">
+                            <div>
+                                <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">名前</div>
+                                <div>タコカン</div>
+                            </div>
+                            <div>
+                                <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">年齢</div>
+                                <div>？？</div>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">🐦</span>
-                            <span class="contact-text">Twitter/X: （準備中）</span>
+                    </div>
+
+                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">資格</h3>
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px; font-size: 0.9em; line-height: 1.8;">
+                        <div>Linux Professional Institute Certification Level 1</div>
+                        <div>AWS Certified Cloud Practitioner</div>
+                        <div>AWS Certified Solutions Architect-Associate</div>
+                        <div>ITパスポート</div>
+                        <div>情報セキュリティマネジメント</div>
+                        <div>Python Zen & PEP 8検定</div>
+                        <div>実用英語技能検定 準二級</div>
+                    </div>
+
+                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">スキル</h3>
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+                        <div style="margin-bottom: 15px;">
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">プログラミング言語</div>
+                            <div style="font-size: 0.85em;">C#, Python</div>
                         </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">ゲーム開発</div>
+                            <div style="font-size: 0.85em;">Unity</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">Web / フロントエンド</div>
+                            <div style="font-size: 0.85em;">HTML</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">OS / インフラ</div>
+                            <div style="font-size: 0.85em;">Linux, Windows, Windows Server, Active Directory</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">スクリプト / コマンドライン</div>
+                            <div style="font-size: 0.85em;">PowerShell, CMD</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">監視・運用ツール</div>
+                            <div style="font-size: 0.85em;">JP1, Zabbix</div>
+                        </div>
+                        <div>
+                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">クラウド</div>
+                            <div style="font-size: 0.85em;">AWS</div>
+                        </div>
+                    </div>
+
+                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">趣味</h3>
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px; font-size: 0.9em; line-height: 1.8;">
+                        <div>格闘技（MMA、ボクシング）</div>
+                        <div>麻雀</div>
+                        <div>お酒（何でも好き、特にウイスキーが好き）</div>
+                    </div>
+
+                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">好きな食べ物</h3>
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; font-size: 0.9em; line-height: 1.8;">
+                        <div>白米</div>
+                        <div>ラーメン</div>
+                        <div>漬物類</div>
                     </div>
                 </div>
             </div>
@@ -688,24 +757,28 @@
             // すべての詳細画面を非表示
             document.getElementById('homeScreen').classList.remove('hidden');
             document.getElementById('projectsScreen').classList.remove('active');
-            document.getElementById('merchandiseScreen').classList.remove('active');
-            document.getElementById('aboutScreen').classList.remove('active');
             document.getElementById('contactScreen').classList.remove('active');
+            document.getElementById('businessScreen').classList.remove('active');
+            document.getElementById('profileScreen').classList.remove('active');
+            document.getElementById('snsScreen').classList.remove('active');
 
             if (screenName === 'home') {
                 document.getElementById('homeScreen').classList.remove('hidden');
             } else if (screenName === 'projects') {
                 document.getElementById('homeScreen').classList.add('hidden');
                 document.getElementById('projectsScreen').classList.add('active');
-            } else if (screenName === 'merchandise') {
-                document.getElementById('homeScreen').classList.add('hidden');
-                document.getElementById('merchandiseScreen').classList.add('active');
-            } else if (screenName === 'about') {
-                document.getElementById('homeScreen').classList.add('hidden');
-                document.getElementById('aboutScreen').classList.add('active');
             } else if (screenName === 'contact') {
                 document.getElementById('homeScreen').classList.add('hidden');
                 document.getElementById('contactScreen').classList.add('active');
+            } else if (screenName === 'business') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('businessScreen').classList.add('active');
+            } else if (screenName === 'profile') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('profileScreen').classList.add('active');
+            } else if (screenName === 'sns') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('snsScreen').classList.add('active');
             }
         }
     </script>
