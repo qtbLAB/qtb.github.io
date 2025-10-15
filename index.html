@@ -64,16 +64,16 @@
 
         .logo {
             font-size: 2.5em;
-            color: #00ff88;
-            text-shadow: 4px 4px 0px #004d29;
+            color: #ffffff;
+            text-shadow: 4px 4px 0px #666666;
             margin-bottom: 40px;
             animation: glow 2s ease-in-out infinite;
             font-family: 'Press Start 2P', cursive;
         }
 
         @keyframes glow {
-            0%, 100% { text-shadow: 4px 4px 0px #004d29, 0 0 10px #00ff88; }
-            50% { text-shadow: 4px 4px 0px #004d29, 0 0 20px #00ff88, 0 0 30px #00ff88; }
+            0%, 100% { text-shadow: 4px 4px 0px #666666, 0 0 10px #ffffff; }
+            50% { text-shadow: 4px 4px 0px #666666, 0 0 20px #ffffff, 0 0 30px #ffffff; }
         }
 
         .window {
@@ -86,6 +86,46 @@
             animation: slideUp 0.8s ease;
         }
 
+        .window.color-green {
+            border-color: #00ff88;
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+        }
+
+        .window.color-white {
+            border-color: #ffffff;
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+        }
+
+        .window.color-darkgreen {
+            border-color: #00aa55;
+            box-shadow: 0 10px 40px rgba(0, 170, 85, 0.3);
+        }
+
+        .window.color-magenta {
+            border-color: #ff00ff;
+            box-shadow: 0 10px 40px rgba(255, 0, 255, 0.3);
+        }
+
+        .window.color-cyan {
+            border-color: #00ffff;
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+        }
+
+        .window.color-yellow {
+            border-color: #ffff00;
+            box-shadow: 0 10px 40px rgba(255, 255, 0, 0.3);
+        }
+
+        .window.color-orange {
+            border-color: #ff6600;
+            box-shadow: 0 10px 40px rgba(255, 102, 0, 0.3);
+        }
+
+        .window.color-pink {
+            border-color: #ff0099;
+            box-shadow: 0 10px 40px rgba(255, 0, 153, 0.3);
+        }
+
         .window-header {
             background: linear-gradient(90deg, #00ff88, #00cc6a);
             padding: 15px 20px;
@@ -95,6 +135,38 @@
             display: flex;
             align-items: center;
             font-weight: 700;
+        }
+
+        .color-green .window-header {
+            background: linear-gradient(90deg, #00ff88, #00cc6a);
+        }
+
+        .color-white .window-header {
+            background: linear-gradient(90deg, #ffffff, #cccccc);
+        }
+
+        .color-darkgreen .window-header {
+            background: linear-gradient(90deg, #00aa55, #008844);
+        }
+
+        .color-magenta .window-header {
+            background: linear-gradient(90deg, #ff00ff, #cc00cc);
+        }
+
+        .color-cyan .window-header {
+            background: linear-gradient(90deg, #00ffff, #00cccc);
+        }
+
+        .color-yellow .window-header {
+            background: linear-gradient(90deg, #ffff00, #cccc00);
+        }
+
+        .color-orange .window-header {
+            background: linear-gradient(90deg, #ff6600, #cc5200);
+        }
+
+        .color-pink .window-header {
+            background: linear-gradient(90deg, #ff0099, #cc0077);
         }
 
         .window-header::before {
@@ -189,6 +261,48 @@
             transform: scale(0.98);
         }
 
+        .nav-button:nth-child(1) { border-color: #00ffff; color: #00ffff; }
+        .nav-button:nth-child(1):hover { 
+            box-shadow: 0 0 30px #00ffff;
+            background: linear-gradient(145deg, #00ffff, #00cccc);
+            color: #1a1a2e;
+        }
+
+        .nav-button:nth-child(2) { border-color: #ff00ff; color: #ff00ff; }
+        .nav-button:nth-child(2):hover { 
+            box-shadow: 0 0 30px #ff00ff;
+            background: linear-gradient(145deg, #ff00ff, #cc00cc);
+            color: #1a1a2e;
+        }
+
+        .nav-button:nth-child(3) { border-color: #00aa55; color: #00aa55; }
+        .nav-button:nth-child(3):hover { 
+            box-shadow: 0 0 30px #00aa55;
+            background: linear-gradient(145deg, #00aa55, #008844);
+            color: #1a1a2e;
+        }
+
+        .nav-button:nth-child(4) { border-color: #ffff00; color: #ffff00; }
+        .nav-button:nth-child(4):hover { 
+            box-shadow: 0 0 30px #ffff00;
+            background: linear-gradient(145deg, #ffff00, #cccc00);
+            color: #1a1a2e;
+        }
+
+        .nav-button:nth-child(5) { border-color: #ff6600; color: #ff6600; }
+        .nav-button:nth-child(5):hover { 
+            box-shadow: 0 0 30px #ff6600;
+            background: linear-gradient(145deg, #ff6600, #cc5200);
+            color: #1a1a2e;
+        }
+
+        .nav-button:nth-child(6) { border-color: #ffffff; color: #ffffff; }
+        .nav-button:nth-child(6):hover { 
+            box-shadow: 0 0 30px #ffffff;
+            background: linear-gradient(145deg, #ffffff, #cccccc);
+            color: #1a1a2e;
+        }
+
         .nav-button .icon {
             font-size: 2.5em;
             display: block;
@@ -224,6 +338,51 @@
             background: #ffd700;
             border-color: #ffd700;
             transform: translateX(-5px);
+        }
+
+        .back-button.color-green {
+            background: #00ff88;
+            border-color: #00ff88;
+        }
+
+        .back-button.color-cyan {
+            background: #00ffff;
+            border-color: #00ffff;
+        }
+
+        .back-button.color-darkgreen {
+            background: #00aa55;
+            border-color: #00aa55;
+        }
+
+        .back-button.color-white {
+            background: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .back-button.color-magenta {
+            background: #ff00ff;
+            border-color: #ff00ff;
+        }
+
+        .back-button.color-cyan {
+            background: #00ffff;
+            border-color: #00ffff;
+        }
+
+        .back-button.color-yellow {
+            background: #ffff00;
+            border-color: #ffff00;
+        }
+
+        .back-button.color-orange {
+            background: #ff6600;
+            border-color: #ff6600;
+        }
+
+        .back-button.color-pink {
+            background: #ff0099;
+            border-color: #ff0099;
         }
 
         .contact-grid {
@@ -340,16 +499,16 @@
             <div class="logo">qtbLAB</div>
 
             <!-- 最新情報セクション -->
-            <div class="window">
+            <div class="window color-green">
                 <div class="window-header">LATEST NEWS</div>
                 <div class="window-content">
                     <div class="project-box">
                         <div class="project-title">🐸 Froggo Jumpies</div>
                         <div class="project-desc">
-                            レトロな雰囲気の横スクロールアクションゲーム<br>
-                            2024年11月 Google Play Store リリース予定
+                            シンプルレトロな横スクロールジャンプゲーム<br>
+                            カエルの大冒険が今、始まる
                         </div>
-                        <span class="badge">最新リリース</span>
+                        <span class="badge">リリース予定 - 2025年11月</span>
                     </div>
                 </div>
             </div>
@@ -385,24 +544,22 @@
 
         <!-- Projects画面 -->
         <div class="detail-screen" id="projectsScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
+            <button class="back-button color-cyan" onclick="showScreen('home')">← BACK</button>
+            <div class="window color-cyan">
                 <div class="window-header">LATEST PROJECTS</div>
                 <div class="window-content">
                     <div class="project-box">
                         <div class="project-title">🐸 Froggo Jumpies</div>
                         <div class="project-desc">
-                            レトロな雰囲気の横スクロールアクションゲーム<br>
+                            シンプルレトロな横スクロールジャンプゲーム<br>
                             カエルの大冒険が今、始まる
                         </div>
-                        <span class="badge">リリース済み - 2024年11月</span>
+                        <span class="badge">リリース予定 - 2025年11月</span>
                     </div>
 
                     <div class="project-box">
-                        <div class="project-title">🎮 次のプロジェクト</div>
+                        <div class="project-title">🎮 ???????????????????</div>
                         <div class="project-desc">
-                            ゲームだけじゃない、アプリも、ツールも。<br>
-                            次は何を作ろうか？
                         </div>
                         <span class="badge">開発中</span>
                     </div>
@@ -412,8 +569,8 @@
 
         <!-- Business画面 -->
         <div class="detail-screen" id="businessScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
+            <button class="back-button color-darkgreen" onclick="showScreen('home')">← BACK</button>
+            <div class="window color-darkgreen">
                 <div class="window-header">BUSINESS</div>
                 <div class="window-content">
                     <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.1em;">事業内容</h3>
@@ -447,83 +604,87 @@
 
         <!-- Profile画面 -->
         <div class="detail-screen" id="profileScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
+            <button class="back-button color-yellow" onclick="showScreen('home')">← BACK</button>
+            <div class="window color-yellow">
                 <div class="window-header">PROFILE</div>
                 <div class="window-content">
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <div style="font-size: 4em; margin-bottom: 15px;">👨‍💻</div>
-                        <h2 style="color: #ffd700; font-size: 1.2em; margin-bottom: 10px;">タコカン</h2>
-                    </div>
+                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 30px; font-size: 0.9em; line-height: 2;">
+                        
+                        <div style="margin-bottom: 20px;">
+                            <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">名前</div>
+                            <div style="color: #ccc;">タコカン</div>
+                        </div>
 
-                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em;">
-                            <div>
-                                <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">名前</div>
-                                <div>タコカン</div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">年齢</div>
+                            <div style="color: #ccc;">？？</div>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">資格</div>
+                            <div style="color: #ccc; line-height: 1.8;">
+                                <div>Linux Professional Institute Certification Level 1</div>
+                                <div>AWS Certified Cloud Practitioner</div>
+                                <div>AWS Certified Solutions Architect-Associate</div>
+                                <div>ITパスポート</div>
+                                <div>情報セキュリティマネジメント</div>
+                                <div>Python Zen & PEP 8検定</div>
+                                <div>実用英語技能検定 準二級</div>
                             </div>
-                            <div>
-                                <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">年齢</div>
-                                <div>？？</div>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">スキル</div>
+                            <div style="color: #ccc;">
+                                <div style="margin-bottom: 10px;">
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">プログラミング言語</div>
+                                    <div>C#, Python</div>
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">ゲーム開発</div>
+                                    <div>Unity</div>
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">Web / フロントエンド</div>
+                                    <div>HTML</div>
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">OS / インフラ</div>
+                                    <div>Linux, Windows, Windows Server, Active Directory</div>
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">スクリプト / コマンドライン</div>
+                                    <div>PowerShell, CMD</div>
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">監視・運用ツール</div>
+                                    <div>JP1, Zabbix</div>
+                                </div>
+                                <div>
+                                    <div style="color: #00ff88; font-weight: 700; margin-bottom: 5px;">クラウド</div>
+                                    <div>AWS</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">資格</h3>
-                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px; font-size: 0.9em; line-height: 1.8;">
-                        <div>Linux Professional Institute Certification Level 1</div>
-                        <div>AWS Certified Cloud Practitioner</div>
-                        <div>AWS Certified Solutions Architect-Associate</div>
-                        <div>ITパスポート</div>
-                        <div>情報セキュリティマネジメント</div>
-                        <div>Python Zen & PEP 8検定</div>
-                        <div>実用英語技能検定 準二級</div>
-                    </div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">趣味</div>
+                            <div style="color: #ccc; line-height: 1.8;">
+                                <div>格闘技（MMA、ボクシング）</div>
+                                <div>麻雀</div>
+                                <div>野球</div>
+                                <div>お酒（何でも好き、特にウイスキーが好き）</div>
+                            </div>
+                        </div>
 
-                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">スキル</h3>
-                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
-                        <div style="margin-bottom: 15px;">
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">プログラミング言語</div>
-                            <div style="font-size: 0.85em;">C#, Python</div>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">ゲーム開発</div>
-                            <div style="font-size: 0.85em;">Unity</div>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">Web / フロントエンド</div>
-                            <div style="font-size: 0.85em;">HTML</div>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">OS / インフラ</div>
-                            <div style="font-size: 0.85em;">Linux, Windows, Windows Server, Active Directory</div>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">スクリプト / コマンドライン</div>
-                            <div style="font-size: 0.85em;">PowerShell, CMD</div>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">監視・運用ツール</div>
-                            <div style="font-size: 0.85em;">JP1, Zabbix</div>
-                        </div>
                         <div>
-                            <div style="color: #00ff88; font-weight: 700; margin-bottom: 8px; font-size: 0.9em;">クラウド</div>
-                            <div style="font-size: 0.85em;">AWS</div>
+                            <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">好きな食べ物</div>
+                            <div style="color: #ccc; line-height: 1.8;">
+                                <div>白米</div>
+                                <div>ラーメン</div>
+                                <div>漬物類</div>
+                            </div>
                         </div>
-                    </div>
-
-                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">趣味</h3>
-                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; margin-bottom: 30px; font-size: 0.9em; line-height: 1.8;">
-                        <div>格闘技（MMA、ボクシング）</div>
-                        <div>麻雀</div>
-                        <div>お酒（何でも好き、特にウイスキーが好き）</div>
-                    </div>
-
-                    <h3 style="color: #ffd700; margin: 30px 0 15px; font-size: 1em;">好きな食べ物</h3>
-                    <div style="background: #0f3460; border: 2px solid #00ff88; border-radius: 8px; padding: 20px; font-size: 0.9em; line-height: 1.8;">
-                        <div>白米</div>
-                        <div>ラーメン</div>
-                        <div>漬物類</div>
                     </div>
                 </div>
             </div>
@@ -531,8 +692,8 @@
 
         <!-- SNS画面 -->
         <div class="detail-screen" id="snsScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
+            <button class="back-button color-orange" onclick="showScreen('home')">← BACK</button>
+            <div class="window color-orange">
                 <div class="window-header">SNS</div>
                 <div class="window-content">
                     <div class="contact-grid">
@@ -559,14 +720,14 @@
 
         <!-- Contact画面 -->
         <div class="detail-screen" id="contactScreen">
-            <button class="back-button" onclick="showScreen('home')">← BACK</button>
-            <div class="window">
+            <button class="back-button color-white" onclick="showScreen('home')">← BACK</button>
+            <div class="window color-white">
                 <div class="window-header">CONTACT</div>
                 <div class="window-content">
                     <div class="contact-grid">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span class="contact-text">メール: （準備中）</span>
+                        <div class="contact-item" style="border-color: #ffffff;">
+                            <span class="contact-icon" style="color: #ffffff;">📧</span>
+                            <span class="contact-text">メール: qtblab.help@gmail.com</span>
                         </div>
                     </div>
                 </div>
