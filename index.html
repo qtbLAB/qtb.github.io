@@ -126,6 +126,11 @@
             box-shadow: 0 10px 40px rgba(255, 0, 153, 0.3);
         }
 
+        .window.color-red {
+            border-color: #ff0000;
+            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
+        }
+
         .window-header {
             background: linear-gradient(90deg, #00ff88, #00cc6a);
             padding: 15px 20px;
@@ -167,6 +172,10 @@
 
         .color-pink .window-header {
             background: linear-gradient(90deg, #ff0099, #cc0077);
+        }
+
+        .color-red .window-header {
+            background: linear-gradient(90deg, #ff0000, #cc0000);
         }
 
         .window-header::before {
@@ -296,8 +305,15 @@
             color: #1a1a2e;
         }
 
-        .nav-button:nth-child(6) { border-color: #ffffff; color: #ffffff; }
+        .nav-button:nth-child(6) { border-color: #ff0000; color: #ff0000; }
         .nav-button:nth-child(6):hover { 
+            box-shadow: 0 0 30px #ff0000;
+            background: linear-gradient(145deg, #ff0000, #cc0000);
+            color: #1a1a2e;
+        }
+
+        .nav-button:nth-child(7) { border-color: #ffffff; color: #ffffff; }
+        .nav-button:nth-child(7):hover { 
             box-shadow: 0 0 30px #ffffff;
             background: linear-gradient(145deg, #ffffff, #cccccc);
             color: #1a1a2e;
@@ -363,11 +379,6 @@
         .back-button.color-magenta {
             background: #ff00ff;
             border-color: #ff00ff;
-        }
-
-        .back-button.color-cyan {
-            background: #00ffff;
-            border-color: #00ffff;
         }
 
         .back-button.color-yellow {
@@ -535,6 +546,10 @@
                     <span class="icon">🌐</span>
                     <span>SNS</span>
                 </button>
+                <button class="nav-button" onclick="window.open('https://buymeacoffee.com/qtblab', '_blank')">
+                    <span class="icon">☕</span>
+                    <span>DONATION</span>
+                </button>
                 <button class="nav-button" onclick="showScreen('contact')">
                     <span class="icon">📧</span>
                     <span>CONTACT</span>
@@ -575,7 +590,7 @@
                 <div class="window-content">
                     <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.1em;">事業内容</h3>
                     <p style="margin-bottom: 30px; line-height: 1.8; font-size: 0.95em;">
-                        qtbLABでは、以下の事業を展開しています：
+                        qtbLABでは、以下の事業を展開しています:
                     </p>
                     
                     <div style="background: #0f3460; border: 2px solid #00aa55; border-radius: 8px; padding: 20px; margin: 20px 0;">
@@ -670,10 +685,10 @@
                         <div style="margin-bottom: 20px;">
                             <div style="color: #ffd700; font-weight: 700; margin-bottom: 10px; font-size: 1em;">趣味</div>
                             <div style="color: #ccc; line-height: 1.8;">
-                                <div>格闘技（MMA、ボクシング）</div>
+                                <div>格闘技(MMA、ボクシング)</div>
                                 <div>麻雀</div>
                                 <div>野球</div>
-                                <div>お酒（何でも好き、特にウイスキーが好き）</div>
+                                <div>お酒(何でも好き、特にウイスキーが好き)</div>
                             </div>
                         </div>
 
@@ -699,19 +714,19 @@
                     <div class="contact-grid">
                         <div class="contact-item" style="border-color: #ff6600;">
                             <span class="contact-icon" style="color: #ff6600;">𝕏</span>
-                            <span class="contact-text">X (Twitter): （準備中）</span>
+                            <span class="contact-text">X (Twitter): (準備中)</span>
                         </div>
                         <div class="contact-item" style="border-color: #ff6600;">
                             <span class="contact-icon" style="color: #ff6600;">📷</span>
-                            <span class="contact-text">Instagram: （準備中）</span>
+                            <span class="contact-text">Instagram: (準備中)</span>
                         </div>
                         <div class="contact-item" style="border-color: #ff6600;">
                             <span class="contact-icon" style="color: #ff6600;">▶️</span>
-                            <span class="contact-text">YouTube: （準備中）</span>
+                            <span class="contact-text">YouTube: (準備中)</span>
                         </div>
                         <div class="contact-item" style="border-color: #ff6600;">
                             <span class="contact-icon" style="color: #ff6600;">🎵</span>
-                            <span class="contact-text">TikTok: （準備中）</span>
+                            <span class="contact-text">TikTok: (準備中)</span>
                         </div>
                     </div>
                 </div>
