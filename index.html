@@ -126,11 +126,6 @@
             box-shadow: 0 10px 40px rgba(255, 0, 153, 0.3);
         }
 
-        .window.color-red {
-            border-color: #ff0000;
-            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
-        }
-
         .window-header {
             background: linear-gradient(90deg, #00ff88, #00cc6a);
             padding: 15px 20px;
@@ -172,10 +167,6 @@
 
         .color-pink .window-header {
             background: linear-gradient(90deg, #ff0099, #cc0077);
-        }
-
-        .color-red .window-header {
-            background: linear-gradient(90deg, #ff0000, #cc0000);
         }
 
         .window-header::before {
@@ -305,15 +296,8 @@
             color: #1a1a2e;
         }
 
-        .nav-button:nth-child(6) { border-color: #ff0000; color: #ff0000; }
+        .nav-button:nth-child(6) { border-color: #ffffff; color: #ffffff; }
         .nav-button:nth-child(6):hover { 
-            box-shadow: 0 0 30px #ff0000;
-            background: linear-gradient(145deg, #ff0000, #cc0000);
-            color: #1a1a2e;
-        }
-
-        .nav-button:nth-child(7) { border-color: #ffffff; color: #ffffff; }
-        .nav-button:nth-child(7):hover { 
             box-shadow: 0 0 30px #ffffff;
             background: linear-gradient(145deg, #ffffff, #cccccc);
             color: #1a1a2e;
@@ -551,10 +535,6 @@
                     <span class="icon">🌐</span>
                     <span>SNS</span>
                 </button>
-                <button class="nav-button" onclick="window.open('https://buymeacoffee.com/qtblab', '_blank')">
-                    <span class="icon">☕</span>
-                    <span>BUY ME A COFFEE</span>
-                </button>
                 <button class="nav-button" onclick="showScreen('contact')">
                     <span class="icon">📧</span>
                     <span>CONTACT</span>
@@ -595,7 +575,7 @@
                 <div class="window-content">
                     <h3 style="color: #ffd700; margin-bottom: 20px; font-size: 1.1em;">事業内容</h3>
                     <p style="margin-bottom: 30px; line-height: 1.8; font-size: 0.95em;">
-                        qtbLABでは、以下の事業を展開しています:
+                        qtbLABでは、以下の事業を展開しています：
                     </p>
                     
                     <div style="background: #0f3460; border: 2px solid #00aa55; border-radius: 8px; padding: 20px; margin: 20px 0;">
@@ -745,4 +725,62 @@
                 <div class="window-header">CONTACT</div>
                 <div class="window-content">
                     <div class="contact-grid">
-                        <div
+                        <div class="contact-item" style="border-color: #ffffff;">
+                            <span class="contact-icon" style="color: #ffffff;">📧</span>
+                            <span class="contact-text">メール: qtblab.help@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            © 2024 qtbLAB. ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+
+    <script>
+        // 星空エフェクト
+        const starsContainer = document.querySelector('.stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // 画面切り替え
+        function showScreen(screenName) {
+            document.getElementById('homeScreen').classList.remove('hidden');
+            document.getElementById('projectsScreen').classList.remove('active');
+            document.getElementById('businessScreen').classList.remove('active');
+            document.getElementById('profileScreen').classList.remove('active');
+            document.getElementById('snsScreen').classList.remove('active');
+            document.getElementById('contactScreen').classList.remove('active');
+
+            if (screenName === 'home') {
+                document.getElementById('homeScreen').classList.remove('hidden');
+            } else if (screenName === 'projects') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('projectsScreen').classList.add('active');
+            } else if (screenName === 'business') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('businessScreen').classList.add('active');
+            } else if (screenName === 'profile') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('profileScreen').classList.add('active');
+            } else if (screenName === 'sns') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('snsScreen').classList.add('active');
+            } else if (screenName === 'contact') {
+                document.getElementById('homeScreen').classList.add('hidden');
+                document.getElementById('contactScreen').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
